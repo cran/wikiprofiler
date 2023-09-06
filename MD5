@@ -1,0 +1,13 @@
+8bb9477dbd499a8b17183168f532cd13 *DESCRIPTION
+7e9154e0f80b9b78fae8f3537c6dc849 *NAMESPACE
+81bf93cdece6a3dc2c88bfeb8e2f4a09 *R/methods.r
+518aff6c805e9285690a71dbf0cd7b0d *R/read-wp.R
+e2ee829fc187b5daf3719b6e1144e8ec *R/utilities.r
+9d0fe3729e9eb5fca93c37d891c0bb75 *R/wpplot.R
+bc2d3f5628289556150867c5ddcc8a56 *README.md
+13ef45680173a953bf52847a642efb31 *inst/figures/2022-06-01_17-58.png
+b31fe326abb409696172efe5683b831f *man/read-wp.Rd
+5b039bfd71444d0c2075b455ec1ae6e6 *man/wp_bgfill.Rd
+b63e5e70ddb8c760a9ec4ec5b909111f *man/wp_shadowtext.Rd
+478afbeff9521bdefa49cddf26291741 *man/wpplot.Rd
+b296cd912167675d266f6af5591df514 *man/wpsave.Rd
