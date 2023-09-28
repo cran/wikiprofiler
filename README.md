@@ -1,17 +1,39 @@
 ```r
-> ID
-[1] "WP63_117935"
-> value
-   Pgd Taldo1   Rpia  G6pdx   Pgls    Tkt    Rpe 
-31.027 67.677 20.317 17.210 41.867 45.300 12.217 
-> 
-> p1 = wpplot(ID)
-> p2 = p1 |> wp_bgfill(value, low='darkgreen', high='firebrick')
-> p3 = p2 |> wp_shadowtext()
-> 
-> g = aplot::plot_list(p1, p2, p3, design="AABB\nCCCC")
-> print(g)
+library(clusterProfiler)
+library(wikiprofiler)
+
+data(geneList, package="DOSE")
+
+de <- names(geneList)[1:100]
+x <- enrichWP(de, organism='Homo sapiens')
+
+
+de2 <- bitr(de, "ENTREZID", "SYMBOL", OrgDb='org.Hs.eg.db')
+#### if needed
+# de2 <- de2[!duplicated(de2[,1]), ]
+value <- setNames(geneList[de2[,1]], de2[,2])
+
+ID <- x$ID[1]
+
+p1 <- wpplot(ID)
+p1
 ```
 
-![](inst/figures/2022-06-01_17-58.png)
+![](examples/f1.png)
+
+
+```r
+p2 <- p1 |> wp_bgfill(value, low='darkgreen', high='firebrick', legend_x = .9, legend_y = .95)
+p2
+```
+
+![](examples/f2.png)
+
+```r
+p3 <- p2 |> wp_shadowtext()
+p3
+```
+
+![](examples/f3.png)
+
 
